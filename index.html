@@ -1,61 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个页面</title>
-    <style>
-        /* 简单样式，让页面看起来干净一点 */
-        body {
-            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
-            background-color: #f0f4f8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero to Tech · 个人主页</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/lab.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="page-shell">
+        <main class="page-content">
+          <section class="dashboard-grid">
 
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 400px;
-        }
+            <!-- ↓↓↓ 顶部 hero：品牌 + 导航 + 大标题 + 副标题 ↓↓↓ -->
+            <!-- 这一整块在 text-lab.html 里几乎一字不差地又抄了一遍 -->
+            <article class="hero-stage panel-full">
+              <div class="hero-topline">
+                <p class="brand-eyebrow">zero to tech</p>
+                <nav class="inline-links hero-nav">
+                  <a class="nav-link" href="index.html">个人主页</a>
+                  <a class="nav-link" href="text-lab.html">文字实验室</a>
+                </nav>
+              </div>
+              <div class="hero-copy">
+                <h1 class="hero-display">关于我</h1>
+                <p class="hero-subtitle">项目，创意，灵感，心得，我的作品</p>
+              </div>
+            </article>
+            <!-- ↑↑↑ hero 结束 ↑↑↑ -->
 
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
+            <article class="panel panel-full featured-work-panel card">
+              <p class="section-kicker">作品</p>
+              <p class="featured-title">文字实验室</p>
+              <p class="featured-copy">拼音和情绪，挖掘中文里的细节</p>
+              <a class="featured-link" href="text-lab.html">
+                <span class="featured-link-label">打开作品</span>
+                <span class="arrow">›</span>
+              </a>
+            </article>
 
-        p {
-            color: #666;
-            line-height: 1.6;
-        }
+            <article class="panel panel-full identity-panel card">
+              <div class="identity-item">
+                <p class="section-kicker">座右铭</p>
+                <p class="identity-value identity-quote">已识乾坤大，尤怜草木青</p>
+              </div>
+              <div class="identity-item">
+                <p class="section-kicker">正在学习</p>
+                <p class="identity-value">零到全栈</p>
+              </div>
+            </article>
 
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #2980b9;
-        }
-    </style>
-</head>
-<body>
-    <div class="card">
-        <h1>你好，邱泓浩二</h1>
-        <p>这是一个简单的 HTML 页面。<br>你可以修改这段文字和样式，开始你的前端练习。</p>
-        <button onclick="alert('欢迎！')">点我试试</button>
+          </section>
+        </main>
+      </div>
     </div>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4/lib/anime.iife.min.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/score.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
 </html>
